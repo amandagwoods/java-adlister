@@ -12,11 +12,23 @@ public class ShowStudentServlet extends HttpServlet {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 
-        String name = request.getParameter("name");
-        out.println("<h3>Hello " + name + " !</h3>");
+        String names = request.getParameter("name");
+        out.println("<h3>Hello " + names + " !</h3>");
 
-        int grade = Integer.parseInt(request.getParameter("grade"));
-        out.println("<span>Grade: " + grade + ".00</span>");
+        int grades = Integer.parseInt(request.getParameter("grade"));
+        out.println("<span>Grade: " + grades + ".00</span>");
 
+//        protected void doPost(HttpServletRequest request, HttpServletResponse response);
+//                response.setContentType("text/html");
+//                PrintWriter out1 = response.getWriter();
+//
+//                String name = request.getParameter("name");
+//                out.println("<h1>As a post</h1>");
+//                out.println("<h3>Hello " + name + " !</h3>");
+//
+//
+//                int grade = Integer.parseInt(request.getParameter("grade"));
+//                out.println("<span>Grade: " + grade + ".00</span>");
+//
     }
 }
